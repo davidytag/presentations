@@ -26,41 +26,104 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section class="center">
-					<h1>Database Normalization</h1>
-					-
-					<br>
-					<h6>the theory in practice</h6>
-				</section>
+				<!--<section class="center">-->
+					<!--<h1>Database Normalization</h1>-->
+				<!--</section>-->
+				<!--<section>-->
+					<!--<h3>What we'll cover</h3>-->
+					<!--<br>-->
+					<!--<ul>-->
+						<!--<li class="fragment fade-in">-->
+							<!--What is normalization, benefits and drawbacks-->
+						<!--</li>-->
+						<!--<br>-->
+						<!--<li class="fragment fade-in">-->
+							<!--Definitions and generic examples of 1NF - 3NF-->
+						<!--</li>-->
+						<!--<br>-->
+						<!--<li class="fragment fade-in">-->
+							<!--How we might normalize AC database tables-->
+						<!--</li>-->
+					<!--</ul>-->
+				<!--</section>-->
 				<section>
-					<h3>The plan:</h3>
-					<br>
-					<table>
-						<tr class="fragment fade-in">
-							<td class="blue">Introduction</td>
-							<td>-</td>
-							<td>what is normalization and normal forms?</td>
-						</tr>
-						<tr class="fragment fade-in">
-							<td class="blue">Motivation</td>
-							<td>-</td>
-							<td>why normalize in the first place?</td>
-						</tr>
-						<tr class="fragment fade-in">
-							<td class="blue">Light Relational Database Theory</td>
-							<td>-</td>
-							<td>how can we guarantee these transformations work?</td>
-						</tr>
-						<tr class="fragment fade-in">
-							<td class="blue">Applications</td>
-							<td>-</td>
-							<td>how can we apply these transformations to our own dbs?</td>
-						</tr>
-					</table>
-				</section>
-				<section>
-					<h3>An Intro to Normalization</h3>
-					<br>
+					<section>
+						<h3>Normalization: the what</h3>
+						<br>
+						<br>
+						<a href="https://en.wikipedia.org/wiki/Database_normalization">Wikipedia</a>
+						<pre class="preformatted">
+						... the process of restructuring a relational database in accordance with a series of so-called
+						<b class="key">normal forms</b>
+						in order to reduce <b class="key">data redundancy</b>
+						and improve <b class="key">data integrity</b>.
+						</pre>
+						<br>
+						<br>
+						<table class="fragment fade-in">
+							<tr>
+								<td></td><td></td><td></td><td><div class="fragment fade-in">🎫  Rain checking this. </div></td>
+							</tr>
+							 
+							<tr>
+								<td>></td><td>Normal Forms</td><td>-</td><td>☐</td>
+							</tr>
+							<tr>
+								<td></td><td>Data Redundancy</td><td>-</td><td>☐</td>
+							</tr>
+							<tr>
+								<td></td><td>Data Integrity</td><td>-</td><td>☐</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<table class="small-table">
+							<tr>
+								<td></td><td>Normal Forms</td><td>-</td><td>🎫</td>
+							</tr>
+							<tr>
+								<td>></td><td>Data Redundancy</td><td>-</td><td>☐</td>
+							</tr>
+							<tr>
+								<td></td><td>Data Integrity</td><td>-</td><td>☐</td>
+							</tr>
+						</table>
+						<br>
+						<p class="fragment fade-in">
+							<b class="key"> Data redundancy</b> is when attributes (columns) are found in more than one table in the database.
+						</p>
+						<br>
+						<div class="fragment fade-in">
+							<img src="assets/3.1.2.png" style="transform: scale(1.5);">
+							<br>
+							<br>
+							<span>Why might this be problematic?</span>
+						</div>
+					</section>
+					<section>
+						<table class="small-table">
+							<tr>
+								<td></td><td>Normal Forms</td><td>-</td><td>🎫</td>
+							</tr>
+							<tr>
+								<td>></td><td>Data Redundancy</td><td>-</td><td>☐</td>
+							</tr>
+							<tr>
+								<td></td><td>Data Integrity</td><td>-</td><td>☐</td>
+							</tr>
+						</table>
+						<br>
+						<p class="fragment fade-in">
+							<b class="key"> Data redundancy</b> is when attributes (columns) are found in more than one table in the database.
+						</p>
+						<br>
+						<div class="fragment fade-in">
+							<img src="assets/3.1.2.png" style="transform: scale(1.5);">
+							<br>
+							<br>
+							<span>Why might this be problematic?</span>
+						</div>
+					</section>
 				</section>
 			</div>
 		</div>
@@ -74,6 +137,8 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				center: false,
+				previewLinks: true,
+				slideNumber: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

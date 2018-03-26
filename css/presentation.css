@@ -25,6 +25,36 @@ body {
 }
 
 /*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+.preformatted {
+	white-space: normal;
+	border: white;
+}
+
+.key {
+	color: #6699CC;
+}
+
+.crossed-out {
+	text-decoration: line-through;
+}
+
+.small-table {
+	font-size: 50% !important;
+	opacity: 0.5;
+}
+
+.image-container {
+	display: table;
+}
+
+.image-text {
+	display: table-cell;
+	vertical-align: middle !important;
+}
+
+/*********************************************
  * HEADERS
  *********************************************/
 .reveal h1,
@@ -157,7 +187,7 @@ body {
   font-family: monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 6px 2px rgba(255, 255, 255, 0.3);
 }
 
 .reveal code {
