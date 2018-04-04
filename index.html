@@ -46,35 +46,61 @@
 						<!--</li>-->
 					<!--</ul>-->
 				<!--</section>-->
+				<!--<section>-->
+					<!--<section>-->
+						<!--<h3>Normalization: the what</h3>-->
+						<!--<br>-->
+						<!--<br>-->
+						<!--<a href="https://en.wikipedia.org/wiki/Database_normalization">Wikipedia</a>-->
+						<!--<pre class="preformatted">-->
+						<!--... the process of restructuring a relational database in accordance with a series of so-called-->
+						<!--<b class="key">normal forms</b>-->
+						<!--in order to reduce <b class="key">data redundancy</b>-->
+						<!--and improve <b class="key">data integrity</b>.-->
+						<!--</pre>-->
+						<!--<br>-->
+						<!--<br>-->
+						<!--<table class="fragment fade-in">-->
+							<!--<tr>-->
+								<!--<td></td><td></td><td></td><td><div class="fragment fade-in">🎫  Rain checking this. </div></td>-->
+							<!--</tr>-->
+							 
+							<!--<tr>-->
+								<!--<td>></td><td>Normal Forms</td><td>-</td><td>☐</td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td></td><td>Data Redundancy</td><td>-</td><td>☐</td>-->
+							<!--</tr>-->
+							<!--<tr>-->
+								<!--<td></td><td>Data Integrity</td><td>-</td><td>☐</td>-->
+							<!--</tr>-->
+						<!--</table>-->
+					<!--</section>-->
+				<!--</section>-->
 				<section>
 					<section>
-						<h3>Normalization: the what</h3>
-						<br>
-						<br>
-						<a href="https://en.wikipedia.org/wiki/Database_normalization">Wikipedia</a>
-						<pre class="preformatted">
-						... the process of restructuring a relational database in accordance with a series of so-called
-						<b class="key">normal forms</b>
-						in order to reduce <b class="key">data redundancy</b>
-						and improve <b class="key">data integrity</b>.
-						</pre>
-						<br>
-						<br>
-						<table class="fragment fade-in">
+						<table class="small-table">
 							<tr>
-								<td></td><td></td><td></td><td><div class="fragment fade-in">🎫  Rain checking this. </div></td>
-							</tr>
-							 
-							<tr>
-								<td>></td><td>Normal Forms</td><td>-</td><td>☐</td>
+								<td></td><td>Normal Forms</td><td>-</td><td>🎫</td>
 							</tr>
 							<tr>
-								<td></td><td>Data Redundancy</td><td>-</td><td>☐</td>
+								<td>></td><td>Data Redundancy</td><td>-</td><td>☐</td>
 							</tr>
 							<tr>
 								<td></td><td>Data Integrity</td><td>-</td><td>☐</td>
 							</tr>
 						</table>
+						<p class="fragment fade-in">
+							<b class="key"> Data redundancy</b> is when attributes (columns) are found in more than one table in the database.
+							<br>
+							<br>
+							<img src="assets/3.1.2.png" style="transform: scale(1.5);">
+						</p>
+							<br>
+							<span class="fragment fade-in">Why would this be beneficial?</span>
+							<br>
+							<br>
+							<span class="fragment fade-in">Why would this be problematic?</span>
 					</section>
 					<section>
 						<table class="small-table">
@@ -88,41 +114,52 @@
 								<td></td><td>Data Integrity</td><td>-</td><td>☐</td>
 							</tr>
 						</table>
-						<br>
 						<p class="fragment fade-in">
-							<b class="key"> Data redundancy</b> is when attributes (columns) are found in more than one table in the database.
+							It depends. If we choose the design with redundancy...
+							<br>
+							<table>
+								<tr class="fragment fade-in">
+									<td>Time [-]</td><td>Expensive db queries can be incrementaly updated</td>
+								</tr>
+								<tr class="fragment fade-in">
+									<td>Space [+]</td><td>Redundant attributes use extra bytes</td>
+								</tr>
+							</table>
+							<br>
+							<ul>
+								<li class="fragment fade-in">1000 measures to calculate? 1000 colmumns?</li>
+							<br>
+								<li class="fragment fade-in">Readability and duplicate documentation?</li>
+							<br>
+								<li class="fragment fade-in"><b class="key">Data integrity</b>?</li>
+							</ul>
 						</p>
-						<br>
-						<div class="fragment fade-in">
-							<img src="assets/3.1.2.png" style="transform: scale(1.5);">
-							<br>
-							<br>
-							<span>Why might this be problematic?</span>
-						</div>
 					</section>
+				</section>
+				<section>
 					<section>
 						<table class="small-table">
 							<tr>
 								<td></td><td>Normal Forms</td><td>-</td><td>🎫</td>
 							</tr>
 							<tr>
-								<td>></td><td>Data Redundancy</td><td>-</td><td>☐</td>
+								<td></td><td>Data Redundancy</td><td>-</td><td>☑</td>
 							</tr>
 							<tr>
-								<td></td><td>Data Integrity</td><td>-</td><td>☐</td>
+								<td>></td><td>Data Integrity</td><td>-</td><td>☐</td>
 							</tr>
 						</table>
-						<br>
 						<p class="fragment fade-in">
-							<b class="key"> Data redundancy</b> is when attributes (columns) are found in more than one table in the database.
-						</p>
-						<br>
-						<div class="fragment fade-in">
+							Broadly, <b class="key">data integrity</b> refers to the degree to which data in a database is accurate and consistent.
+							<br>
+							<br>
 							<img src="assets/3.1.2.png" style="transform: scale(1.5);">
+						</p>
+							<br>
+							<span class="fragment fade-in">Why would this be beneficial?</span>
 							<br>
 							<br>
-							<span>Why might this be problematic?</span>
-						</div>
+							<span class="fragment fade-in">Why would this be problematic?</span>
 					</section>
 				</section>
 			</div>
